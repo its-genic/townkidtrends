@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #ffe6f0, #fff5fb);
+  color: #333;
+  animation: fadeInBody 1.5s ease-in;
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header {
+  background-color: #ff69b4;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 2px;
+  animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+nav {
+  background-color: #ffc0cb;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  animation: fadeInNav 1.5s ease-in;
+}
+
+@keyframes fadeInNav {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ff1493;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+nav a:hover {
+  color: #ff1493;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  animation: fadeInContent 1.5s ease-in;
+}
+
+@keyframes fadeInContent {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  color: #ff1493;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(255,105,180,0.5);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255,105,180,0.7);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"], input[type="number"], input[type="password"], select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ff69b4;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, select:focus {
+  border-color: #ff1493;
+  box-shadow: 0 0 5px rgba(255,20,147,0.5);
+}
+
+button {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #ff1493;
+  transform: scale(1.05);
+}
